@@ -5,6 +5,16 @@
       rel="stylesheet"
       href="https://unpkg.com/leopard@^1/dist/index.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+    jQuery(function($){
+      if($(window).innerWidth()<$(window).innerHeight()){
+        $('#project').css({'width':$(window).innerWidth()+'px','max-width':'100%','height':'auto'});
+      }else{
+        $('#project').css({'width':'auto','height':$(window).innerHeight()-50+'px','max-height':'100%'});
+      }
+    });
+    </script>
   </head>
   <body>
     <button id="greenFlag">Green Flag</button>
